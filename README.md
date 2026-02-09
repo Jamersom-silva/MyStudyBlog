@@ -1,86 +1,103 @@
-# 📘 StudyBlog — Blog pessoal de jornada de estudos
+📘 StudyBlog — Personal Study Journey Blog
 
-O **StudyBlog** é um projeto full-stack criado para documentar, de forma pública, minha jornada de estudos em tecnologia (Java, Spring, Backend, etc.), funcionando como um **blog técnico pessoal**, com organização por tópicos e roadmap de aprendizado.
+StudyBlog is a full-stack project created to publicly document my study journey in technology (Java, Spring, Backend, etc.). It works as a personal technical blog, organized by topics and supported by a learning roadmap.
 
-O projeto foi pensado como um **MVP realista**, focado em boas práticas de backend, segurança e arquitetura, simulando um sistema que poderia ser utilizado em produção.
+The project was designed as a realistic MVP, focused on backend best practices, security, and clean architecture, simulating a system that could be used in a production environment.
 
----
+🎯 Project Goal
 
-## 🎯 Objetivo do projeto
+Document and share my technical learning journey
 
-- Registrar e compartilhar minha evolução técnica
-- Organizar conteúdos por **tópicos** (ex: Java, Spring, SQL)
-- Exibir um **roadmap visual** do que já foi estudado
-- Permitir **postagens apenas pelo administrador**
-- Servir como **projeto de portfólio** para vagas backend Java
+Organize content by topics (e.g., Java, Spring, SQL)
 
----
+Display a visual learning roadmap of completed and upcoming topics
 
-## 🧩 Funcionalidades
+Allow post creation only by the administrator
 
-### 🔓 Público
-- Visualizar lista de posts publicados
-- Ler post completo por slug
-- Visualizar tópicos de estudo
-- Visualizar roadmap de aprendizado por tópico
+Serve as a portfolio project for Java backend positions
 
-### 🔐 Admin (somente o autor)
-- Login com autenticação JWT
-- Criar posts em rascunho
-- Publicar / despublicar posts
-- Criar e gerenciar tópicos
-- Criar e atualizar itens do roadmap
+🧩 Features
+🔓 Public
 
----
+View list of published posts
 
-## 🛠️ Stack utilizada
+Read full posts by slug
 
-### Backend
-- **Java 17**
-- **Spring Boot 3**
-- **Spring Web**
-- **Spring Data JPA (Hibernate)**
-- **Spring Security + JWT**
-- **Flyway** (versionamento de banco)
-- **PostgreSQL**
-- **Maven**
+Browse study topics
 
-### Frontend (em desenvolvimento)
-- **Angular** (standalone components)
-- Consumo via API REST
+View learning roadmap by topic
 
----
+🔐 Admin (author only)
 
-## 🗂️ Arquitetura
+Login with JWT authentication
 
-O backend segue uma arquitetura em camadas:
+Create draft posts
 
-Com separação clara de responsabilidades:
-- Controllers: camada HTTP
-- Services: regras de negócio
-- Repositories: acesso a dados
-- DTOs: contratos de entrada/saída
-- Security: autenticação e autorização JWT
+Publish / unpublish posts
 
----
+Create and manage topics
 
-## 🔐 Segurança
+Create and update roadmap items
 
-- Autenticação baseada em **JWT**
-- Rotas públicas e privadas bem definidas
-- `/api/public/**` → acesso livre
-- `/api/admin/**` → requer token JWT
-- Sessão **stateless** (padrão REST)
+🛠️ Tech Stack
+Backend
 
----
+Java 17
 
-## 🗄️ Banco de dados
+Spring Boot 3
 
-- **PostgreSQL**
-- Versionamento com **Flyway**
-- Criação automática do schema ao iniciar a aplicação
-- Controle total do modelo via migrations SQL
+Spring Web
 
----
+Spring Data JPA (Hibernate)
 
-**DEPLOY** -> em breve 
+Spring Security + JWT
+
+Flyway (database versioning)
+
+PostgreSQL
+
+Maven
+
+Frontend (in progress)
+
+Angular (standalone components)
+
+REST API consumption
+
+🗂️ Architecture
+
+The backend follows a layered architecture with a clear separation of concerns:
+
+Controllers: HTTP layer
+
+Services: business rules
+
+Repositories: data access
+
+DTOs: input/output contracts
+
+Security: JWT-based authentication and authorization
+
+🔐 Security
+
+JWT-based authentication
+
+Clearly defined public and protected routes
+
+/api/public/** → open access
+
+/api/admin/** → requires JWT token
+
+Stateless session (REST standard)
+
+🗄️ Database
+
+PostgreSQL
+
+Versioned with Flyway
+
+Automatic schema creation on application startup
+
+Full control of the data model via SQL migrations
+
+DEPLOY → coming soon 🚀
